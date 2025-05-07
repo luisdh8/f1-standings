@@ -3,26 +3,26 @@ import mplcursors  # For interactive tooltips
 
 # Diccionario de los pilotos de F1 y sus respectivos equipos
 pilotos = {
-    'Piastri': {'nombre': 'Oscar Piastri', 'equipo': 'McLaren'},
-    'Norris': {'nombre': 'Lando Norris', 'equipo': 'McLaren'},
-    'Verstappen': {'nombre': 'Max Verstappen', 'equipo': 'Red Bull Racing'},
-    'Russell': {'nombre': 'George Russell', 'equipo': 'Mercedes'},
-    'Leclerc': {'nombre': 'Charles Leclerc', 'equipo': 'Ferrari'},
-    'Antonelli': {'nombre': 'Andrea Kimi Antonelli', 'equipo': 'Mercedes'},
-    'Hamilton': {'nombre': 'Lewis Hamilton', 'equipo': 'Ferrari'},
-    'Albon': {'nombre': 'Alexander Albon', 'equipo': 'Williams'},
-    'Ocon': {'nombre': 'Esteban Ocon', 'equipo': 'Alpine'},
-    'Stroll': {'nombre': 'Lance Stroll', 'equipo': 'Aston Martin'},
-    'Tsunoda': {'nombre': 'Yuki Tsunoda', 'equipo': 'RB'},
-    'Gasly': {'nombre': 'Pierre Gasly', 'equipo': 'Alpine'},
-    'Sainz': {'nombre': 'Carlos Sainz', 'equipo': 'Ferrari'},
-    'Hulkenberg': {'nombre': 'Nico Hülkenberg', 'equipo': 'Sauber'},
-    'Bearman': {'nombre': 'Oliver Bearman', 'equipo': 'Haas'},
-    'Hadjar': {'nombre': 'Isack Hadjar', 'equipo': 'RB'},
-    'Alonso': {'nombre': 'Fernando Alonso', 'equipo': 'Aston Martin'},
-    'Lawson': {'nombre': 'Liam Lawson', 'equipo': 'Red Bull Racing'},
-    'Doohan': {'nombre': 'Jack Doohan', 'equipo': 'Alpine'},
-    'Bortoleto': {'nombre': 'Gabriel Bortoleto', 'equipo': 'McLaren'}
+    'PIASTRI': {'nombre': 'Oscar Piastri', 'equipo': 'McLaren'},
+    'NORRIS': {'nombre': 'Lando Norris', 'equipo': 'McLaren'},
+    'VERSTAPPEN': {'nombre': 'Max Verstappen', 'equipo': 'Red Bull Racing'},
+    'RUSSELL': {'nombre': 'George Russell', 'equipo': 'Mercedes'},
+    'LECLERC': {'nombre': 'Charles Leclerc', 'equipo': 'Ferrari'},
+    'ANTONELLI': {'nombre': 'Andrea Kimi Antonelli', 'equipo': 'Mercedes'},
+    'HAMILTON': {'nombre': 'Lewis Hamilton', 'equipo': 'Ferrari'},
+    'ALBON': {'nombre': 'Alexander Albon', 'equipo': 'Williams'},
+    'OCON': {'nombre': 'Esteban Ocon', 'equipo': 'Alpine'},
+    'STROLL': {'nombre': 'Lance Stroll', 'equipo': 'Aston Martin'},
+    'TSUNODA': {'nombre': 'Yuki Tsunoda', 'equipo': 'RB'},
+    'GASLY': {'nombre': 'Pierre Gasly', 'equipo': 'Alpine'},
+    'SAINZ': {'nombre': 'Carlos Sainz', 'equipo': 'Ferrari'},
+    'HULKENBERG': {'nombre': 'Nico Hülkenberg', 'equipo': 'Sauber'},
+    'BEARMAN': {'nombre': 'Oliver Bearman', 'equipo': 'Haas'},
+    'HADJAR': {'nombre': 'Isack Hadjar', 'equipo': 'RB'},
+    'ALONSO': {'nombre': 'Fernando Alonso', 'equipo': 'Aston Martin'},
+    'LAWSON': {'nombre': 'Liam Lawson', 'equipo': 'Red Bull Racing'},
+    'DOOHAN': {'nombre': 'Jack Doohan', 'equipo': 'Alpine'},
+    'BORTOLETO': {'nombre': 'Gabriel Bortoleto', 'equipo': 'McLaren'}
 }
 
 # Inicializar los puntos
@@ -56,26 +56,26 @@ colores_equipos = {
 
 # Asignar colores de equipo a los pilotos
 colores_pilotos = {
-    pilotos['Piastri']['nombre']: colores_equipos['McLaren'],
-    pilotos['Norris']['nombre']: colores_equipos['McLaren'],
-    pilotos['Verstappen']['nombre']: colores_equipos['Red Bull Racing'],
-    pilotos['Russell']['nombre']: colores_equipos['Mercedes'],
-    pilotos['Leclerc']['nombre']: colores_equipos['Ferrari'],
-    pilotos['Antonelli']['nombre']: colores_equipos['Mercedes'],
-    pilotos['Hamilton']['nombre']: colores_equipos['Ferrari'],
-    pilotos['Albon']['nombre']: colores_equipos['Williams'],
-    pilotos['Ocon']['nombre']: colores_equipos['Alpine'],
-    pilotos['Stroll']['nombre']: colores_equipos['Aston Martin'],
-    pilotos['Tsunoda']['nombre']: colores_equipos['RB'],
-    pilotos['Gasly']['nombre']: colores_equipos['Alpine'],
-    pilotos['Sainz']['nombre']: colores_equipos['Ferrari'],
-    pilotos['Hulkenberg']['nombre']: colores_equipos['Sauber'],
-    pilotos['Bearman']['nombre']: colores_equipos['Haas'],
-    pilotos['Hadjar']['nombre']: colores_equipos['RB'],
-    pilotos['Alonso']['nombre']: colores_equipos['Aston Martin'],
-    pilotos['Lawson']['nombre']: colores_equipos['Red Bull Racing'],
-    pilotos['Doohan']['nombre']: colores_equipos['Alpine'],
-    pilotos['Bortoleto']['nombre']: colores_equipos['McLaren']
+    pilotos['PIASTRI']['nombre']: colores_equipos['McLaren'],
+    pilotos['NORRIS']['nombre']: colores_equipos['McLaren'],
+    pilotos['VERSTAPPEN']['nombre']: colores_equipos['Red Bull Racing'],
+    pilotos['RUSSELL']['nombre']: colores_equipos['Mercedes'],
+    pilotos['LECLERC']['nombre']: colores_equipos['Ferrari'],
+    pilotos['ANTONELLI']['nombre']: colores_equipos['Mercedes'],
+    pilotos['HAMILTON']['nombre']: colores_equipos['Ferrari'],
+    pilotos['ALBON']['nombre']: colores_equipos['Williams'],
+    pilotos['OCON']['nombre']: colores_equipos['Alpine'],
+    pilotos['STROLL']['nombre']: colores_equipos['Aston Martin'],
+    pilotos['TSUNODA']['nombre']: colores_equipos['RB'],
+    pilotos['GASLY']['nombre']: colores_equipos['Alpine'],
+    pilotos['SAINZ']['nombre']: colores_equipos['Ferrari'],
+    pilotos['HULKENBERG']['nombre']: colores_equipos['Sauber'],
+    pilotos['BEARMAN']['nombre']: colores_equipos['Haas'],
+    pilotos['HADJAR']['nombre']: colores_equipos['RB'],
+    pilotos['ALONSO']['nombre']: colores_equipos['Aston Martin'],
+    pilotos['LAWSON']['nombre']: colores_equipos['Red Bull Racing'],
+    pilotos['DOOHAN']['nombre']: colores_equipos['Alpine'],
+    pilotos['BORTOLETO']['nombre']: colores_equipos['McLaren']
 }
 
 # Sistema de puntos por posición
@@ -152,7 +152,7 @@ def graficar_standings_combinados():
     plt.show()
 
 # Simulación de entrada (puedes modificar esta parte)
-entrada = "1 Piastri 2 Norris 3 Verstappen"
+entrada = "1 PIASTRI 2 NORRIS 3 VERSTAPPEN 4 RUSSELL 5 LECLERC 6 ANTONELLI 7 HAMILTON 8 ALBON 9 OCON 10 STROLL 11 TSUNODA 12 GASLY 13 SAINZ 14 HULKENBERG"
 lineas = entrada.split()
 for i in range(0, len(lineas), 2):
     posicion = int(lineas[i])
