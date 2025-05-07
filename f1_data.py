@@ -128,18 +128,30 @@ def graficar_constructor_standings():
 def graficar_standings_combinados():
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 6))
     
+    # Ordenar los pilotos por puntos
+    pilotos_ordenados = sorted(puntos_pilotos.items(), key=lambda x: x[1], reverse=True)
+    nombres_pilotos = [nombre for nombre, _ in pilotos_ordenados]
+    puntos_pilotos_ordenados = [p for _, p in pilotos_ordenados]
+    colores_pilotos_list = [colores_pilotos[nombre] for nombre in nombres_pilotos]
+
     # Graficar Driver Standings
-    bars1 = ax1.barh(list(puntos_pilotos.keys()), list(puntos_pilotos.values()), color=[colores_pilotos[p] for p in puntos_pilotos.keys()])
+    bars1 = ax1.barh(nombres_pilotos, puntos_pilotos_ordenados, color=colores_pilotos_list)
     ax1.set_xlabel('Puntos')
     ax1.set_title('Driver Standings')
     ax1.invert_yaxis()
-    
+
+    # Ordenar los equipos por puntos
+    equipos_ordenados = sorted(puntos_equipos.items(), key=lambda x: x[1], reverse=True)
+    nombres_equipos = [equipo for equipo, _ in equipos_ordenados]
+    puntos_equipos_ordenados = [p for _, p in equipos_ordenados]
+    colores_equipos_list = [colores_equipos[equipo] for equipo in nombres_equipos]
+
     # Graficar Constructor Standings
-    bars2 = ax2.barh(list(puntos_equipos.keys()), list(puntos_equipos.values()), color=[colores_equipos[e] for e in puntos_equipos.keys()])
+    bars2 = ax2.barh(nombres_equipos, puntos_equipos_ordenados, color=colores_equipos_list)
     ax2.set_xlabel('Puntos')
     ax2.set_title('Constructor Standings')
     ax2.invert_yaxis()
-    
+
     plt.tight_layout()
 
     # Add interactive tooltips
@@ -159,6 +171,3 @@ def handleInput(FinalResult):
         for posicion, apellido in enumerate(carrera):
             # Asignar puntos a cada piloto según su posición
             asignar_puntos(posicion + 1, apellido)
-
-# Mostrar gráficas
-graficar_standings_combinados()
