@@ -75,7 +75,3 @@ python main.py
 - Mejorar la precisión del OCR para nombres cortos y en condiciones de baja calidad.
 - Implementar un sistema de clasificación de pilotos más robusto usando aprendizaje automático.
 - Añadir soporte para más categorías de clasificación como vueltas rápidas y poles.
-
-## 📝 Licencia
-
-Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
