@@ -82,7 +82,11 @@ def readStandings(country):
     
     return corrected_names
 
-pilots = readStandings('Australia')
+GrandPrix = ["Australia", "China", "Japan"]
 
-for name in pilots:
-    print(name)
+FinalResult = []
+
+for gp in GrandPrix:
+    pilots = readStandings(gp)
+    FinalResult.append(pilots)
+
