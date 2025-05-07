@@ -21,7 +21,7 @@ git clone https://github.com/usuario/F1-Standings-Analyzer.git
 cd F1-Standings-Analyzer
 ```
 
-2. **Crear y activar el entorno virtual
+2. **Crear y activar el entorno virtual**
 
 ```bash
 python -m venv venv
@@ -37,13 +37,13 @@ En macOS/Linux:
 source venv/bin/activate
 ```
 
-3. **Instalar dependencias
+3. **Instalar dependencias**
 
 ```bash
 pip install opencv-python easyocr numpy rapidfuzz matplotlib mplcursors
 ```
 
-4. **Descargar los archivos de entrada
+4. **Descargar los archivos de entrada**
 
 Coloca las imágenes de resultados de carreras en la carpeta Assets/ con el nombre del país seguido de .png. Por ejemplo:
 
@@ -53,7 +53,7 @@ Assets/China.png
 Assets/Japan.png
 ```
 
-5. **Ejecutar el programa
+5. **Ejecutar el programa**
 ```bash
 python main.py
 ```
