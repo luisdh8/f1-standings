@@ -2,12 +2,12 @@ import cv2
 import numpy as np
 import easyocr
 
-img_path = 'Assets/Australia - Feature.png'
+img_path = 'Assets/China - Sprint.png'
 
 original = cv2.imread(img_path)
 img = cv2.cvtColor(original, cv2.COLOR_BGR2RGB)
 
-lower_white = np.array([120, 120, 120])
+lower_white = np.array([130, 130, 130])
 upper_white = np.array([255, 255, 255])
 
 # # Filter black
@@ -23,7 +23,7 @@ upper_white = np.array([255, 255, 255])
 # blurred = cv2.GaussianBlur(mask, (21, 21), sigmaX=9)
 
 # Filter white
-mask = np.zeros(img.shape, dtype=np.uint8)
+mask = np.zeros((img.shape[0], img.shape[1]), dtype=np.uint8)
 
 for y in range(img.shape[0]):
     for x in range(img.shape[1]):
@@ -32,6 +32,14 @@ for y in range(img.shape[0]):
             lower_white[1] <= g <= upper_white[1] and
             lower_white[2] <= b <= upper_white[2]):
             mask[y, x] = 255
+
+# result_rgb = np.zeros_like(img)
+# for y in range(img.shape[0]):
+#     for x in range(img.shape[1]):
+#         if mask[y, x] == 255:
+#             result_rgb[y, x] = img[y, x]
+
+# result_bgr = cv2.cvtColor(result_rgb, cv2.COLOR_RGB2BGR)
 
 # OCR
 reader = easyocr.Reader(['en'])
@@ -51,5 +59,6 @@ cv2.imshow("Original", original)
 # cv2.imshow("Mask", mask)
 # cv2.imshow("Gaussian", blurred)
 cv2.imshow("Mask", mask)
+# cv2.imshow("Filtered White RGB", result_bgr)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
