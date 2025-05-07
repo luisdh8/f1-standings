@@ -152,12 +152,13 @@ def graficar_standings_combinados():
     plt.show()
 
 # Simulación de entrada (puedes modificar esta parte)
-entrada = "1 PIASTRI 2 NORRIS 3 VERSTAPPEN 4 RUSSELL 5 LECLERC 6 ANTONELLI 7 HAMILTON 8 ALBON 9 OCON 10 STROLL 11 TSUNODA 12 GASLY 13 SAINZ 14 HULKENBERG"
-lineas = entrada.split()
-for i in range(0, len(lineas), 2):
-    posicion = int(lineas[i])
-    apellido = lineas[i + 1]
-    asignar_puntos(posicion, apellido)
+def handleInput(FinalResult):
+    entrada = FinalResult # FinalResult es un vector de 3 arrays donde cada array solo tiene el nombre del piloto. Cada array es una carrera.
+    
+    for carrera in entrada:
+        for posicion, apellido in enumerate(carrera):
+            # Asignar puntos a cada piloto según su posición
+            asignar_puntos(posicion + 1, apellido)
 
 # Mostrar gráficas
 graficar_standings_combinados()
